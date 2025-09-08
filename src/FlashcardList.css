@@ -1,0 +1,129 @@
+/* FlashcardList.css - hiện đại, đẹp, responsive */
+
+.flashcard-list {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 16px;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.flashcard-form {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flashcard-form h2 {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.input-modern {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 1rem;
+  margin-bottom: 0;
+  background: #f7fafc;
+  transition: border 0.2s;
+}
+.input-modern:focus {
+  border-color: #3182ce;
+  outline: none;
+  background: #fff;
+}
+
+.options-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.btn-modern {
+  background: linear-gradient(90deg, #3182ce 0%, #63b3ed 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(49,130,206,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-modern:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #4299e1 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.flashcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.flashcard-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 24px 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.flashcard-card:hover {
+  box-shadow: 0 6px 24px rgba(49,130,206,0.13);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.flashcard-question {
+  font-size: 1.1rem;
+  color: #2b6cb0;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.flashcard-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.option-label input[type="radio"] {
+  accent-color: #3182ce;
+}
+.option-label:hover {
+  color: #2b6cb0;
+}
+
+@media (max-width: 600px) {
+  .flashcard-form {
+    padding: 18px 8px;
+  }
+  .flashcard-card {
+    padding: 14px 6px;
+  }
+  .flashcard-list {
+    padding: 4px;
+  }
+}
